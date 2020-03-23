@@ -1,0 +1,49 @@
+
+@import "../../_variables.scss";
+.login-wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.register-container{
+    margin-top:8px;
+    width:90%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width :80%;
+}
+
+.welcome-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width:90%;
+
+}
+
+.full-width{
+    width: 100%;
+}
+
+.large-button{
+    width:90%;
+    background-color: $accent;
+}
+

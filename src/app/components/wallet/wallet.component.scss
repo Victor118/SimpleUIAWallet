@@ -1,0 +1,43 @@
+@import "../../_variables.scss";
+
+.account-name{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.balance-list{
+    position: fixed;
+    top:50px;
+    overflow: auto;
+    left:0;
+    display:flex;
+    flex-direction: column;
+    
+    height: calc(100% - 50px);
+    width:100%;
+    background-color: rgb(245, 245, 245);
+}
+
+.asset-balance{
+    position:relative;
+    height:100px;
+    margin-top:3px;
+    background-color: white;
+}
+
+.asset-name{
+    color:#AAA;
+}
+
+.bouton-send{
+    position:absolute;
+    color:#AAA;
+    bottom:5px;
+    right:5px;
+    width: 32px;
+    height:32px;
+   
+}

@@ -1,0 +1,42 @@
+<div class="login-wrapper">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title >Import wallet</mat-card-title>
+      </mat-card-header>
+  
+    
+        <mat-card-content class="vertical-center">
+          <mat-form-field color="accent" class="full-width">
+            <input matInput type="password" placeholder="Password" [(ngModel)]="pincode">
+          </mat-form-field>
+  
+          <mat-form-field color="accent" class="full-width">
+            <input matInput type="password" placeholder="Password" placeholder="Confirm password" [(ngModel)]="pincodeConfirm">
+          </mat-form-field>
+          <mat-form-field color="accent" class="full-width">
+            <textarea matInput
+            cdkTextareaAutosize placeholder="BrainKey"
+            #autosize="cdkTextareaAutosize"
+            [(ngModel)]="mnemonic"
+            cdkAutosizeMinRows="5"
+            cdkAutosizeMaxRows="10"></textarea>
+            </mat-form-field>
+            <span>OR IMPORT PRIVATE KEY</span>
+            <mat-form-field color="accent" class="full-width">
+              <textarea matInput
+              cdkTextareaAutosize placeholder="Private key"
+              #autosize="cdkTextareaAutosize"
+              [(ngModel)]="privateKey"
+              cdkAutosizeMinRows="2"
+              cdkAutosizeMaxRows="10"></textarea>
+              </mat-form-field>
+        </mat-card-content>
+        <div class="register-container"><button mat-stroked-button class="btn-block large-button" (click)="import()">Import</button></div>
+        <div class="register-container"><button mat-stroked-button class="btn-block large-button" (click)="register()">Create account</button></div>
+
+      
+    </mat-card>
+
+    
+  </div>

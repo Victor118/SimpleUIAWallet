@@ -1,0 +1,68 @@
+
+@import "../../_variables.scss";
+
+
+.send-wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.send-container{
+    margin-top:8px;
+    width:90%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width :80%;
+}
+
+
+
+.welcome-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width:90%;
+
+}
+
+.close{
+    position:absolute;
+    top:0;
+    right:0;
+    font-weight: bold;
+    font-size:20px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+.full-width{
+    width: 100%;
+}
+
+.large-button{
+    width:90%;
+    background-color: $accent;
+}
+
+.brainkey{
+    color:$accent;
+}

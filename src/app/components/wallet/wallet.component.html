@@ -1,0 +1,9 @@
+
+<div class="balance-list">
+    <mat-list>
+        <mat-list-item *ngFor="let balance of balances" class="asset-balance" (click)="openSendDialog(balance)">
+            <span class="asset-name">{{balance.balance}} {{balance.asset_name}} </span> 
+            <button mat-icon-button class="bouton-send"><img src="./assets/icons/send.svg"/></button>
+        </mat-list-item>
+    </mat-list>
+</div>
