@@ -106,6 +106,24 @@ export class BitsharesService extends BlockchainAPI{
           });
       }
 
+      public lookupAccounts=(startName:string,limit:number=10):Promise<any[]>=> {
+        return new Promise((resolve, reject) => {
+            this.ensureConnection().then(() => {
+                Apis.instance().db_api()
+                .exec("lookup_accounts", [
+                    startName, limit
+                ]).then(accounts => {
+                    console.log("Accounts list : ",accounts);
+                    resolve(accounts);
+                   
+                }).catch(err => {
+                    reject(err);
+                })
+
+            }).catch(reject);
+        });
+    }
+
 
     getAccountByPublicKey(pubKey) {
         return new Promise((resolve, reject) => {

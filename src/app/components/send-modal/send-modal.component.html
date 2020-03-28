@@ -13,9 +13,17 @@
       <form class="welcome-form">
         <mat-card-content class="vertical-center">
            <mat-form-field color="accent" class="full-width">
-                <input matInput placeholder="Send to" [(ngModel)]="accountName" [ngModelOptions]="{standalone: true}">
+                <!--input matInput placeholder="Send to" [(ngModel)]="accountName" [ngModelOptions]="{standalone: true}"-->
+
+                  <input type="text" matInput [(ngModel)]="accountName" [matAutocomplete]="auto" (keypress)="accountName=$event.target.value" [ngModelOptions]="{standalone: true}">
+ 
+                
+                <mat-autocomplete #auto="matAutocomplete">
+                  <mat-option *ngFor="let account of accounts" [value]="account[0]">{{account[0]}}</mat-option>
+                </mat-autocomplete>
             </mat-form-field>
           <mat-form-field color="accent" class="full-width">
+            
             <input matInput placeholder="Password" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
           </mat-form-field>
 
@@ -24,7 +32,7 @@
           </mat-form-field>
         </mat-card-content>
        
-        <div class="send-container"><button mat-stroked-button  class="btn-block large-button" (click)="transfert()">Send</button></div>
+        <div class="send-container"><button mat-stroked-button  class="btn-block large-button" [disabled]="transfertDisabled && balance.balance < amount" (click)="transfer()">Send</button></div>
       </form>
       
     </mat-card>

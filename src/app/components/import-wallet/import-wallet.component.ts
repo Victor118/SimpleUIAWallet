@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {
-  mnemonicToSeedSync,
-} from "bip39-english";
+import {mnemonicToSeedHex} from "bip39-english";
 
 import { BitsharesService } from 'src/app/services/bitshares.service';
 import { AppDataStorageService } from 'src/app/services/app-data-storage.service';
@@ -29,8 +27,8 @@ export class ImportWalletComponent implements OnInit {
     if(this.pincode == this.pincodeConfirm){
       if(!this.privateKey || this.privateKey.trim() == ""){
         //console.log(validateMnemonic(this.mnemonic) === true);
-        console.log("seed generation ...")
-        const seedHex: string = mnemonicToSeedSync(this.mnemonic).toString('hex');
+        console.log("seed generation ...",mnemonicToSeedHex)
+        const seedHex: string = mnemonicToSeedHex(this.mnemonic).toString('hex');
         
 
         console.log(seedHex);

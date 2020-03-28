@@ -16,6 +16,7 @@ import { SendModalComponent } from './components/send-modal/send-modal.component
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HttpClientModule,
     AngularMaterialModule,
     MatSnackBarModule,
+    MatAutocompleteModule,
     FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production , registrationStrategy: 'registerImmediately'})
   ],
