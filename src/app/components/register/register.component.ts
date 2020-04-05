@@ -25,6 +25,7 @@ export class RegisterComponent implements OnInit {
   mnemonic :string;
   accountName:string;
   pincode:string;
+  disabledButton : boolean=true;
   confirmPincode:string;
   constructor(private router: Router,private bitsharesService: BitsharesService,private appDataStore:AppDataStorageService) { }
 
@@ -32,7 +33,7 @@ export class RegisterComponent implements OnInit {
     console.log("ngOnInit of registerComponent ");
      this.mnemonic = generateMnemonic (256);
 
-
+    this.disabledButton = false;
   }
 
   public backToLogin = ()=>{

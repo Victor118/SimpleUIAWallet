@@ -1,6 +1,6 @@
 let _blockchains = {
     BTS: {
-        walletSymbols: ['BTS','BADCOIN','HONEST.USD','HONEST.CNY','HONEST.BTC','BIT.USD','OPEN.ETH'],
+        walletSymbols: ['BTS','BADCOIN','HONEST.USD','HONEST.CNY','POCKET','USD','OPEN.ETH'],
         coreSymbol: 'BTS',
         name: 'BitShares',
         chainId: '4018d7844c78f6a6c41c6a552b898022310fc5dec06da467ee7905a8dad512c8',

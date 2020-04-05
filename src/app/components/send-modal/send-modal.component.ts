@@ -77,7 +77,7 @@ export class SendModalComponent implements OnInit {
 
   public transfer = () =>{
     this.transfertDisabled = true;
-    console.log("transfert ");
+    console.log("transfer ");
     let pk = this.appDataStorageService.decryptPrivateKeys(this.password);
     let amountObject ={amount:blockchainReadableAmount(this._amount,this.asset.precision),asset_id:this.balance.asset_id};
     console.log("AMountObject ",amountObject);
@@ -85,12 +85,14 @@ export class SendModalComponent implements OnInit {
       console.log("success");
       this.transfertDisabled = false;
       this.dialogRef.close("Transaction confirmed !");
+      
     }, (error)=>{
       console.error("error :",error);
       this.transfertDisabled = false;
       this.dialogRef.close("Error :"+error.message);
 
     });
+    pk = undefined;
   }
 
   public backToLogin=()=>{

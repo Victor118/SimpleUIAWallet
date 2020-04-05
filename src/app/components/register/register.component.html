@@ -15,11 +15,11 @@
                 <input matInput placeholder="Username" [(ngModel)]="accountName" [ngModelOptions]="{standalone: true}">
             </mat-form-field>
           <mat-form-field color="accent" class="full-width">
-            <input matInput type="password" [(ngModel)]="pincode" placeholder="Pin code">
+            <input matInput type="password" [(ngModel)]="pincode" placeholder="Password" [ngModelOptions]="{standalone: true}">
           </mat-form-field>
   
           <mat-form-field color="accent" class="full-width">
-            <input matInput type="password" [(ngModel)]="confirmPincode" placeholder="Confirm pin code">
+            <input matInput type="password" [(ngModel)]="confirmPincode" placeholder="Confirm password" [ngModelOptions]="{standalone: true}">
           </mat-form-field>
           <div color="accent" class="full-width">
             <span class="brainkey">BrainKey:</span>
@@ -31,8 +31,8 @@
             cdkAutosizeMaxRows="10">{{mnemonic}}</textarea>
             </div>
         </mat-card-content>
-        <div class="register-container"><button mat-stroked-button  class="btn-block large-button">Import</button></div>
-        <div class="register-container"><button mat-stroked-button  class="btn-block large-button" (click)="registerNewAccount()">Register new account</button></div>
+       
+        <div class="register-container"><button mat-stroked-button  class="btn-block large-button" [disabled]="disabledButton" (click)="registerNewAccount()">Register new account</button></div>
       </form>
       
     </mat-card>

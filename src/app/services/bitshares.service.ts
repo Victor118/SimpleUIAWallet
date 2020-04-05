@@ -237,7 +237,7 @@ export class BitsharesService extends BlockchainAPI{
                                   asset_id:assets[i].id,
                                   asset_type: account.balances[i].asset_type,
                                   asset_name: assets[i].symbol,
-                                  balance: account.balances[i].balance,
+                                  balance: account.balances[i].balance / Math.pow(10, assets[i].precision),
                                   owner: assets[i].issuer,
                                   prefix: "BIT"
                               };
